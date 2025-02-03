@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import path from "path";
 
 export default defineConfig({
   server: {
@@ -10,15 +10,16 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve('src'),
+      "@": path.resolve("src"),
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@import "@/styles/vars.scss";`,
+        api: "modern-compiler",
+        additionalData: `@use "@/styles/_vars" as *;`,
       },
     },
   },
-})
+});
 

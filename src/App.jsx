@@ -1,7 +1,6 @@
-// import './styles/_app.scss';
+import './styles/_app.scss';
 import IconLogo from '@/components/icons/IconLogo';
 import Calculator from '@/components/calculator/Calculator';
-// import '@/styles/_app.scss';
 
 function App() {
 
