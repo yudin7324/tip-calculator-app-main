@@ -1,9 +1,62 @@
 .calculator {
+  display: grid;
+  grid-template-columns: 475px 1fr;
   border-radius: 25px;
   max-width: 920px;
   width: 100%;
   background-color: $color-white;
   box-shadow: 0 32px 43px 0 rgba(79, 166, 175, 0.2);
 
-  padding: 40px;
+  &__input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 45px 48px 48px 48px;
+  }
+
+  &__result-section {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: $color-very-dark-cyan;
+    margin: 32px 32px 32px 0;
+    padding: 40px;
+  }
+
+  &__tips {
+
+    &-title {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-dark-grayish-cyan;
+      margin-bottom: 16px;
+    }
+
+    &-wrap {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 14px;
+      row-gap: 16px;
+    }
+  }
+
+  &__btn {
+    height: 48px;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: $color-very-dark-cyan;
+    padding: 9px 40px;
+    border-radius: 5px;
+    background-color: $color-strong-cyan;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #9fe8df;
+    }
+  }
 }

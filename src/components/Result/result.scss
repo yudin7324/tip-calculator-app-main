@@ -1,0 +1,28 @@
+.result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color-white;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    font-size: 13px;
+    color: $color-grayish-cyan;
+  }
+
+  &__count {
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+    color: $color-strong-cyan;
+  }
+}

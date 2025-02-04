@@ -14,7 +14,7 @@ function Input({ label, placeholder, errorMessage, icon: Icon }) {
     <div className='input'>
 
       {label && <div className='input__heading'>
-        <label htmlFor="input-field">{label}</label>
+        <label className='input__label' htmlFor="input-field">{label}</label>
         {errorMessage && <div className='input__error'>{errorMessage}</div>}
       </div>}
 
