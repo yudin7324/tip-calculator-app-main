@@ -4,12 +4,12 @@ import Calculator from '@/components/calculator/Calculator';
 
 function App() {
   return (
-    <div className="app">
+    <main className="app">
       <div className='app__logo'>
         <IconLogo />
       </div>
       <Calculator />
-    </div>
+    </main>
   )
 }
 
