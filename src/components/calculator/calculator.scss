@@ -1,17 +1,29 @@
 .calculator {
   display: grid;
-  grid-template-columns: 475px 1fr;
-  border-radius: 25px;
-  max-width: 920px;
+  grid-template-columns: 1fr;
+  border-radius: 25px 25px 0 0;
+  max-width: 500px;
   width: 100%;
   background-color: $color-white;
   box-shadow: 0 32px 43px 0 rgba(79, 166, 175, 0.2);
 
+  @media (min-width: 991px) {
+    margin: 0 25px;
+    border-radius: 25px;
+    grid-template-columns: 475px 1fr;
+    max-width: 920px;
+  }
+
   &__input-section {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 45px 48px 48px 48px;
+    gap: 32px;
+    padding: 32px;
+
+    @media (min-width: 991px) {
+      gap: 40px;
+      padding: 45px 48px 48px 48px;
+    }
   }
 
   &__result-section {
@@ -20,8 +32,13 @@
     border-radius: 15px;
     overflow: hidden;
     background-color: $color-very-dark-cyan;
-    margin: 32px 32px 32px 0;
-    padding: 40px;
+    margin: 0 24px 32px 24px;
+    padding: 37px 24px 24px 24px;
+
+    @media (min-width: 991px) {
+      margin: 32px 32px 32px 0;
+      padding: 45px 48px 48px 48px;
+    }
   }
 
   &__tips {
@@ -35,9 +52,13 @@
 
     &-wrap {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       column-gap: 14px;
       row-gap: 16px;
+
+      @media (min-width: 991px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
 
@@ -54,6 +75,12 @@
     width: 100%;
     margin-top: auto;
     transition: all 0.3s ease-in-out;
+    opacity: 1;
+
+    &.disabled {
+      pointer-events: none;
+      opacity: 0.35;
+    }
 
     &:hover {
       background-color: #9fe8df;

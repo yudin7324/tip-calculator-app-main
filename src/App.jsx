@@ -3,7 +3,6 @@ import IconLogo from '@/components/icons/IconLogo';
 import Calculator from '@/components/calculator/Calculator';
 
 function App() {
-
   return (
     <div className="app">
       <div className='app__logo'>

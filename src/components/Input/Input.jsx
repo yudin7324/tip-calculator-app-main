@@ -1,30 +1,38 @@
-import { useState } from 'react'
 import PropTypes from 'prop-types'; 
-import './input.scss'
+import './input.scss';
 
-function Input({ label, placeholder, errorMessage, icon: Icon }) {
-  const [inputValue, setInputValue] = useState();
-
-
+function Input({ 
+  label, 
+  placeholder, 
+  isError, 
+  errorMessage, 
+  icon: Icon, 
+  value, 
+  onChange,
+  maxLength,
+  isCustomField
+}) {
   function handleChange(event) {
-    setInputValue(event.target.value);
+    let newValue = event.target.value;
+    if (/^\d*$/.test(newValue) && newValue.length <= maxLength) {
+      onChange(newValue);
+    }
   }
 
   return (
-    <div className='input'>
-
-      {label && <div className='input__heading'>
-        <label className='input__label' htmlFor="input-field">{label}</label>
-        {errorMessage && <div className='input__error'>{errorMessage}</div>}
-      </div>}
+    <div className={`input ${isError ? 'error' : ''} ${isCustomField ? 'custom' : ''}`}>
+      {label && (
+        <div className='input__heading'>
+          <label className='input__label' htmlFor="input-field">{label}</label>
+          {errorMessage && <div className='input__error'>{errorMessage}</div>}
+        </div>
+      )}
 
       <div className='input__wrap'>
-        <div className='input__icon'>
-          {Icon && <Icon />}
-        </div>
+        {Icon && <div className='input__icon'><Icon /></div>}
         <input 
-          id="input-field" 
-          value={inputValue} 
+          id="input-field"
+          value={value} 
           type="number" 
           className='input__field' 
           onChange={handleChange}
@@ -32,14 +40,19 @@ function Input({ label, placeholder, errorMessage, icon: Icon }) {
         />
       </div>
     </div>
-  )
+  );
 }
 
 Input.propTypes = {
   label: PropTypes.string,    
   placeholder: PropTypes.string,
+  isError: PropTypes.bool,
   errorMessage: PropTypes.string,
-  icon: PropTypes.elementType, 
+  icon: PropTypes.elementType,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]), 
+  onChange: PropTypes.func.isRequired,
+  maxLength: PropTypes.number,
+  isCustomField: PropTypes.bool,
 };
 
 export default Input;

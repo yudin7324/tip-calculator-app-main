@@ -5,5 +5,11 @@
   justify-content: center;
   height: 100%;
   min-height: 100vh;
-  gap: 88px;
+  gap: 41px;
+  padding: 50px 0 0 0;
+
+  @media (min-width: 991px) {
+    padding: 50px 0;
+    gap: 88px;
+  }
 }

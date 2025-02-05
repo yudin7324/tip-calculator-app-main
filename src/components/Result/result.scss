@@ -2,9 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   
   &:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+
+    @media (min-width: 991px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__title {
@@ -21,8 +26,12 @@
 
   &__count {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 32px;
     letter-spacing: -0.02em;
     color: $color-strong-cyan;
+
+    @media (min-width: 991px) {
+      font-size: 48px;
+    }
   }
 }
