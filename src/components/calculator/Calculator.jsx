@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useId } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import Input from '../Input/Input';
 import Radio from '../Radio/Radio';
 import Result from '../Result/Result';
@@ -19,9 +19,6 @@ function Calculator() {
   const [people, setPeople] = useState('');
   const [selectedTip, setSelectedTip] = useState(null);
   const [customTip, setCustomTip] = useState('');
-  const billId = useId();
-  const peopleId = useId();
-  const customTipId = useId();
 
   const billValue = parseFloat(bill) || 0;
   const peopleValue = parseInt(people) || 0;
@@ -50,7 +47,7 @@ function Calculator() {
     <div className='calculator'>
       <div className='calculator__input-section'>
         <Input
-          id={billId}
+          id="input-bill"
           onChange={setBill} 
           value={bill}
           label='Bill' 
@@ -72,7 +69,7 @@ function Calculator() {
               />
             ))}
             <Input
-              id={customTipId}
+              id="input-custom-tip"
               onChange={(value) => { setCustomTip(value); setSelectedTip(null); }}
               value={customTip}  
               placeholder='Custom'
@@ -83,7 +80,7 @@ function Calculator() {
         </div>
 
         <Input 
-          id={peopleId}
+          id="input-people"
           onChange={setPeople} 
           value={people}
           isError={isError}
