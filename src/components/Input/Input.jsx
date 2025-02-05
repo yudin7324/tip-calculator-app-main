@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import './input.scss';
 
 function Input({ 
+  id,
   label, 
   placeholder, 
   isError, 
@@ -23,7 +24,7 @@ function Input({
     <div className={`input ${isError ? 'error' : ''} ${isCustomField ? 'custom' : ''}`}>
       {label && (
         <div className='input__heading'>
-          <label className='input__label' htmlFor="input-field">{label}</label>
+          <label className='input__label' htmlFor={id}>{label}</label>
           {errorMessage && <div className='input__error'>{errorMessage}</div>}
         </div>
       )}
@@ -31,7 +32,7 @@ function Input({
       <div className='input__wrap'>
         {Icon && <div className='input__icon'><Icon /></div>}
         <input 
-          id="input-field"
+          id={id}
           value={value} 
           type="number" 
           className='input__field' 
@@ -44,6 +45,7 @@ function Input({
 }
 
 Input.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]), 
   label: PropTypes.string,    
   placeholder: PropTypes.string,
   isError: PropTypes.bool,
