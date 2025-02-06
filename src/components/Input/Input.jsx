@@ -14,8 +14,9 @@ function Input({
   isCustomField
 }) {
   function handleChange(event) {
-    let newValue = event.target.value;
-    if (/^\d*$/.test(newValue) && newValue.length <= maxLength) {
+    let newValue = event.target.value.replace(',', '.');
+
+    if (/^\d*\.?\d{0,2}$/.test(newValue) && newValue.length <= maxLength) {
       onChange(newValue);
     }
   }
@@ -34,7 +35,7 @@ function Input({
         <input 
           id={id}
           value={value} 
-          type="number" 
+          type="text" 
           className='input__field' 
           onChange={handleChange}
           placeholder={placeholder}

@@ -20,7 +20,7 @@ function Calculator() {
   const [selectedTip, setSelectedTip] = useState(null);
   const [customTip, setCustomTip] = useState('');
 
-  const billValue = parseFloat(bill) || 0;
+  const billValue = parseInt(bill) || 0;
   const peopleValue = parseInt(people) || 0;
   const tipPercentage = selectedTip ?? (parseFloat(customTip) || 0);
 
