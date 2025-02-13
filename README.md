@@ -1,28 +1,29 @@
-# Frontend Mentor - Tip calculator app
+# Frontend Mentor - Time Tracking Dashboard
 
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Time Tracking Dashboard coding challenge](./design/desktop-preview.jpg)
 
 ## Overview
-This is a Tip Calculator application built with React as part of a **Frontend Mentor** challenge. The app allows users to input the total bill amount, select the tip percentage, and calculate the tip per person. It provides the final total bill including the tip, helping users easily split the cost in a convenient and intuitive interface.
+This is a **Time Tracking Dashboard** built with Vue.js as part of a **Frontend Mentor** challenge. The app allows users to switch between daily, weekly, and monthly time tracking stats in a clean and responsive UI.
 
 ## Features
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person
+- Responsive layout that adapts to different screen sizes
+- Interactive UI with hover states for buttons and elements
+- Dynamic filtering of time tracking stats (Daily, Weekly, Monthly)
 
 ## Tech Stack
-- React
-- SASS
+- Vue 3
 - Vite
+- Sass
 
-### Running the Project
-Start the development server:
+## Getting Started
+
+### Installation
+Clone the repository and install dependencies:
 
 ```sh
-npm run dev
-```
-
-The app will be available at `http://localhost:3000/`.
+git clone https://github.com/yudin7324/time-tracking-dashboard.git
+cd time-tracking-dashboard
+npm install
 
 ### Building for Production
 
