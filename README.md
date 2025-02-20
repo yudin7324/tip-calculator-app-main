@@ -24,11 +24,12 @@ Clone the repository and install dependencies:
 git clone https://github.com/yudin7324/time-tracking-dashboard.git
 cd time-tracking-dashboard
 npm install
+```
 
 ### Building for Production
 
 To create an optimized production build, run:
-```
+
 ```sh
 npm run build
 ```
