@@ -28,7 +28,7 @@ npm install
 ### Building for Production
 
 To create an optimized production build, run:
-
+```
 ```sh
 npm run build
 ```
