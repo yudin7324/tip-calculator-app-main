@@ -2,8 +2,6 @@
 
 ![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
 
-# [Demo](https://fancy-banoffee-3e3ecb.netlify.app/)
-
 ## Overview
 This tip calculator app provides a seamless and intuitive way to split bills accurately. It ensures an optimal experience on any device, offering clear interactive feedback and precise calculations for tipping and total cost per person.
 
