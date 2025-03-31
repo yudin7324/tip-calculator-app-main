@@ -11,7 +11,7 @@ This is a **Time Tracking Dashboard** built with Vue.js as part of a **Frontend 
 - Dynamic filtering of time tracking stats (Daily, Weekly, Monthly)
 
 ## Tech Stack
-- Vue 3
+- React
 - Vite
 - Sass
 
