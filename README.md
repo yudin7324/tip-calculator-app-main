@@ -1,11 +1,11 @@
-# Time Tracking Dashboard
+# Tip calculator app
 
 ![Design preview for the Time Tracking Dashboard coding challenge](./design/preview.jpg)
 
 ## Features
-- Responsive layout that adapts to different screen sizes
-- Interactive UI with hover states for buttons and elements
-- Dynamic filtering of time tracking stats (Daily, Weekly, Monthly)
+- Responsive Design – The layout automatically adjusts to different screen sizes for a smooth user experience.
+- Interactive Elements – Hover states enhance usability, making interactions clear and engaging.
+- Accurate Tip Calculation – The app precisely computes the tip amount and total bill per person, ensuring fair cost distribution.
 
 ## Tech Stack
 - React
@@ -29,4 +29,3 @@ To create an optimized production build, run:
 ```sh
 npm run build
 ```
-
