@@ -1,9 +1,6 @@
 # Tip calculator app
 
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
-
-## Overview
-This tip calculator app provides a seamless and intuitive way to split bills accurately. It ensures an optimal experience on any device, offering clear interactive feedback and precise calculations for tipping and total cost per person.
+![Design preview for the Time Tracking Dashboard coding challenge](./design/preview.jpg)
 
 ## Features
 - Responsive Design – The layout automatically adjusts to different screen sizes for a smooth user experience.
@@ -15,6 +12,20 @@ This tip calculator app provides a seamless and intuitive way to split bills acc
 - Vite
 - Sass
 
-## License
-This project is part of a [Frontend Mentor](https://www.frontendmentor.io) challenge and is intended for educational purposes.
+## Getting Started
 
+### Installation
+Clone the repository and install dependencies:
+
+```sh
+git clone https://github.com/yudin7324/time-tracking-dashboard.git
+cd time-tracking-dashboard
+npm install
+
+### Building for Production
+
+To create an optimized production build, run:
+
+```sh
+npm run build
+```
